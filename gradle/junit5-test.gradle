@@ -1,0 +1,18 @@
+ext {
+    junitJupiterVersion = '5.0.2'
+}
+
+dependencies {
+    // We use Jupiter API in our test implementations
+    testCompile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testCompile "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+
+    // To avoid compiler warnings about @API annotations in JUnit code
+    testCompile 'org.apiguardian:apiguardian-api:1.0.0'
+
+    // For creating mocks with Mockito
+    testCompile 'org.mockito:mockito-core:2.13.0'
+
+    // Needed to run JUnit Jupiter tests
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+}

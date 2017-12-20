@@ -1,0 +1,27 @@
+sourceSets {
+    spockTest {
+        groovy.srcDir file('src/spockTest/groovy')
+        resources.srcDir file('src/spockTest/resources')
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += output + compileClasspath
+    }
+}
+
+task spockTest(type: Test) {
+    description = 'Runs the Spock tests.'
+    group = 'verification'
+    testClassesDirs = sourceSets.spockTest.output.classesDirs
+    classpath = sourceSets.spockTest.runtimeClasspath
+    mustRunAfter test
+
+    reports {
+        html.destination = project.file("$html.destination/spock")
+        junitXml.destination = project.file("$junitXml.destination/spock")
+    }
+}
+
+check.dependsOn spockTest
+
+dependencies {
+    spockTestCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+}

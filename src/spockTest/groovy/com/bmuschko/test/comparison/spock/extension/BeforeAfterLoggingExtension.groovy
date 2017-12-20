@@ -1,20 +1,12 @@
 package com.bmuschko.test.comparison.spock.extension
 
-import org.spockframework.runtime.extension.IGlobalExtension
+import org.spockframework.runtime.extension.AbstractAnnotationDrivenExtension
 import org.spockframework.runtime.model.SpecInfo
 
-class BeforeAfterLoggingExtension implements IGlobalExtension {
+class BeforeAfterLoggingExtension extends AbstractAnnotationDrivenExtension<BeforeAfterLogging> {
 
     @Override
-    void start() {
-    }
-
-    @Override
-    void visitSpec(SpecInfo spec) {
+    void visitSpecAnnotation(BeforeAfterLogging annotation, SpecInfo spec) {
         spec.addListener(new BeforeAfterEventListener())
-    }
-
-    @Override
-    void stop() {
     }
 }

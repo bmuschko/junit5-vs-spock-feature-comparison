@@ -1,0 +1,1 @@
+= JUnit 5 vs. Spock feature comparison image:https://travis-ci.org/bmuschko/junit5-vs-spock-feature-comparison.svg?branch=master["Build Status", link="https://travis-ci.org/bmuschko/junit5-vs-spock-feature-comparison"]

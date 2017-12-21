@@ -8,6 +8,10 @@ public class DefaultFileReader implements FileReader {
 
     @Override
     public String readContent(Path path) throws IOException {
+        if (Files.notExists(path)) {
+            throw new IOException("File does not exist");
+        }
+
         return new String(Files.readAllBytes(path));
     }
 }

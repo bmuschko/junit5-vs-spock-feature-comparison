@@ -1,4 +1,4 @@
-package com.bmuschko.test.comparison.junit5;
+package com.bmuschko.test.comparison.junit5.tagged;
 
 import com.bmuschko.test.comparison.ArithmeticOperation;
 import org.junit.jupiter.api.Tag;

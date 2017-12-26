@@ -1,1 +1,18 @@
 = JUnit 5 vs. Spock feature comparison image:https://travis-ci.org/bmuschko/junit5-vs-spock-feature-comparison.svg?branch=master["Build Status", link="https://travis-ci.org/bmuschko/junit5-vs-spock-feature-comparison"]
+
+[options="header"]
+|=======
+|Description                  |JUnit 5                               |Spock
+|Test execution               |`@Test`                               |`Specification`
+|Fixture set up and tear down |`@BeforeEach`, `@AfterEach`           |`setup`, `teardown`
+|Descriptive test names       |`@DisplayName`                        |Method name as String
+|Disabling tests              |`@Disabled`                           |`@Ignore`
+|Expecting thrown exceptions  |`assertThrows`                        |`@FailsWith`
+|Repeating test execution     |`@RepeatedTest`                       |`where` statement with counter
+|Declaring timeouts           |`assertTimeout`                       |`@Timeout`
+|Conditional test execution   |`assumeTrue`                          |`@Requires`
+|Data-driven tests            |`@ParameterizedTest`, `@MethodSource` |`where` statement with table
+|Mocking                      |Mockito                               |built-in mock capabilities
+|Filtering test execution     |`@Tag`                                |custom annotations with runner configuration
+|Extending the test framework |`@ExtendWith`                         |`@ExtensionAnnotation`
+|=======

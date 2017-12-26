@@ -12,7 +12,7 @@
 |Declaring timeouts           |`assertTimeout`                       |`@Timeout`
 |Conditional test execution   |`assumeTrue`                          |`@Requires`
 |Data-driven tests            |`@ParameterizedTest`, `@MethodSource` |`where` statement with table
-|Mocking                      |Mockito                               |built-in mock capabilities
-|Filtering test execution     |`@Tag`                                |custom annotations with runner configuration
+|Mocking                      |Mockito                               |Built-in mock capabilities
+|Filtering test execution     |`@Tag`                                |Custom annotations with runner configuration
 |Extending the test framework |`@ExtendWith`                         |`@ExtensionAnnotation`
 |=======

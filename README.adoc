@@ -1,5 +1,7 @@
 = JUnit 5 vs. Spock feature comparison image:https://travis-ci.org/bmuschko/junit5-vs-spock-feature-comparison.svg?branch=master["Build Status", link="https://travis-ci.org/bmuschko/junit5-vs-spock-feature-comparison"]
 
+== Covered features
+
 [options="header"]
 |=======
 |Description                  |JUnit 5                               |Spock
@@ -16,3 +18,19 @@
 |Filtering test execution     |`@Tag`                                |Custom annotations with runner configuration
 |Extending the test framework |`@ExtendWith`                         |`@ExtensionAnnotation`
 |=======
+
+== Executing the tests
+
+All tests can be executed with the help of Gradle. The project provides a link:https://docs.gradle.org/current/userguide/gradle_wrapper.html[Gradle Wrapper] so no installation of the Gradle runtime is needed.
+
+=== Windows:
+
+```
+> gradlew.bat check
+```
+
+=== *nix:
+
+```
+$ ./gradlew check
+```

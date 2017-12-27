@@ -1,6 +1,7 @@
 package com.bmuschko.test.comparison.junit5;
 
 import com.bmuschko.test.comparison.DefaultFileReader;
+import com.bmuschko.test.comparison.FileReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FixtureSetupCleanup {
 
-    private final DefaultFileReader fileReader = new DefaultFileReader();
+    private final FileReader fileReader = new DefaultFileReader();
     private Path testFile;
 
     @BeforeEach

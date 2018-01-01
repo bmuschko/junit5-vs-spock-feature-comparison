@@ -9,6 +9,7 @@ class DataDrivenTest extends Specification {
 
     @Subject def arithmeticOperation = new ArithmeticOperation()
 
+    @Unroll
     def "can add"() {
         expect:
         arithmeticOperation.add(1, b) >= 2

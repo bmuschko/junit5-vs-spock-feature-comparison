@@ -17,7 +17,7 @@ class ExpectedExceptionTest extends Specification {
         fileReader.readContent(Paths.get('hello.text'))
     }
 
-    def "throws exception if file contents cannot be read and assert exception message"() {
+    def "throws exception if file contents cannot be read and assert message"() {
         when:
         fileReader.readContent(Paths.get('hello.text'))
 

@@ -12,7 +12,7 @@
 |Expecting thrown exceptions  |`assertThrows`                        |`@FailsWith`
 |Repeating test execution     |`@RepeatedTest`                       |`where` statement with counter
 |Declaring timeouts           |`assertTimeout`                       |`@Timeout`
-|Conditional test execution   |`assumeTrue`                          |`@Requires`
+|Conditional test execution   |`assumeTrue`, `ExecutionCondition`    |`@Requires`
 |Data-driven tests            |`@ParameterizedTest`, `@MethodSource` |`where` statement with table
 |Mocking                      |Mockito                               |Built-in mock capabilities
 |Filtering test execution     |`@Tag`                                |Custom annotations with runner configuration

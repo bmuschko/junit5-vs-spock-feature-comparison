@@ -23,5 +23,5 @@ task spockTest(type: Test) {
 check.dependsOn spockTest
 
 dependencies {
-    spockTestCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+    spockTestImplementation 'org.spockframework:spock-core:1.1-groovy-2.4'
 }

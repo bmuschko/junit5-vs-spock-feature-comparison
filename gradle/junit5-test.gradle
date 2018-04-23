@@ -1,33 +1,26 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
-    }
+test {
+    useJUnitPlatform()
 }
 
-apply plugin: org.junit.platform.gradle.plugin.JUnitPlatformPlugin
-
 ext {
-    junitJupiterVersion = '5.0.2'
-    junitPlatformVersion = '1.0.2'
+    junitJupiterVersion = '5.1.1'
+    junitPlatformVersion = '1.1.1'
 }
 
 dependencies {
     // We use Jupiter API in our test implementations
-    testCompile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
-    testCompile "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
 
     // Needed for filtering tests by tags in the IDE
-    testCompile("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
+    testImplementation("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
 
     // To avoid compiler warnings about @API annotations in JUnit code
-    testCompile 'org.apiguardian:apiguardian-api:1.0.0'
+    testImplementation 'org.apiguardian:apiguardian-api:1.0.0'
 
     // For creating mocks with Mockito
-    testCompile 'org.mockito:mockito-core:2.13.0'
+    testImplementation 'org.mockito:mockito-core:2.13.0'
 
     // Needed to run JUnit Jupiter tests
-    testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
 }

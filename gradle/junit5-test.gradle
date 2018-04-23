@@ -15,9 +15,6 @@ dependencies {
     // Needed for filtering tests by tags in the IDE
     testImplementation("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
 
-    // To avoid compiler warnings about @API annotations in JUnit code
-    testImplementation 'org.apiguardian:apiguardian-api:1.0.0'
-
     // For creating mocks with Mockito
     testImplementation 'org.mockito:mockito-core:2.13.0'
 
